@@ -1,47 +1,13 @@
-import 'dart:math';
-
+import 'package:dice_roller/dice_widget.dart';
 import 'package:flutter/material.dart';
 
-class HomeBanner extends StatefulWidget {
+class HomeBanner extends StatelessWidget {
   const HomeBanner({super.key});
 
   @override
-  HomeBannerState createState() => HomeBannerState();
-}
-
-class HomeBannerState extends State<HomeBanner> {
-  int diceNumber = 1;
-
-  void rollDice() {
-    diceNumber = Random().nextInt(6) + 1;
-    print("New dice number: $diceNumber");
-  }
-
-  @override
-  Widget build(context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Image(
-            key: ValueKey(diceNumber),
-            image: AssetImage("assets/images/dice/dice-$diceNumber.png"),
-            width: 200,
-          ),
-          TextButton(
-            onPressed: rollDice,
-            style: TextButton.styleFrom(
-              foregroundColor: Colors.white,
-              textStyle: const TextStyle(
-                fontSize: 25,
-              ),
-            ),
-            child: const Text(
-              "Roll dice!",
-            ),
-          ),
-        ],
-      ),
+  Widget build(BuildContext context) {
+    return const Center(
+      child: DiceWidget(),
     );
   }
 }
