@@ -1,6 +1,6 @@
-import 'package:dice_roller/screens/app_bar.dart';
-import 'package:dice_roller/screens/home_banner.dart';
-import 'package:dice_roller/style/background.dart';
+import 'package:dice_roller/app_bar.dart';
+import 'package:dice_roller/home_banner.dart';
+import 'package:dice_roller/background.dart';
 import 'package:flutter/material.dart';
 
 void main() {
