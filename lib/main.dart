@@ -24,10 +24,7 @@ class MyApp extends StatelessWidget {
           key: null,
         ),
         body: MainBackground(
-          HomeBanner(
-            "Hello Papi",
-            "Flutter time!",
-          ),
+          HomeBanner(),
         ),
       ),
     );
