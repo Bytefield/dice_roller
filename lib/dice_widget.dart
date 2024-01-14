@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:dice_roller/components/button.dart';
 import 'package:flutter/material.dart';
 
 final randomizer = Random();
@@ -30,17 +31,8 @@ class _DiceWidgetState extends State<DiceWidget> {
           image: AssetImage("assets/images/dice/dice-$diceNumber.png"),
           width: 200,
         ),
-        TextButton(
+        Button(
           onPressed: rollDice,
-          style: TextButton.styleFrom(
-            foregroundColor: Colors.white,
-            textStyle: const TextStyle(
-              fontSize: 25,
-            ),
-          ),
-          child: const Text(
-            "Roll dice!",
-          ),
         ),
       ],
     );
